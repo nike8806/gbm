@@ -24,6 +24,7 @@ Test for GBM
   - Header
 
 ## Next Steps
+- Use API context and cookies o storage;
 - Firebase, params refactor.
 - Styles and SASS organization.
 - Mobile First.
