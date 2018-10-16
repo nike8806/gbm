@@ -28,6 +28,7 @@ ShallowWrapper {
           className="header__title"
         >
           <input
+            id="button-logout"
             onClick={[Function]}
             type="button"
             value="Logout"
@@ -41,6 +42,7 @@ ShallowWrapper {
           </div>
         </div>,
         false,
+        "",
       ],
       "className": "header",
     },
@@ -52,6 +54,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <input
+            id="button-logout"
             onClick={[Function]}
             type="button"
             value="Logout"
@@ -64,6 +67,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "id": "button-logout",
             "onClick": [Function],
             "type": "button",
             "value": "Logout",
@@ -99,6 +103,7 @@ ShallowWrapper {
         "type": "div",
       },
       false,
+      "",
     ],
     "type": "div",
   },
@@ -113,6 +118,7 @@ ShallowWrapper {
             className="header__title"
           >
             <input
+              id="button-logout"
               onClick={[Function]}
               type="button"
               value="Logout"
@@ -126,6 +132,7 @@ ShallowWrapper {
             </div>
           </div>,
           false,
+          "",
         ],
         "className": "header",
       },
@@ -137,6 +144,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <input
+              id="button-logout"
               onClick={[Function]}
               type="button"
               value="Logout"
@@ -149,6 +157,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
+              "id": "button-logout",
               "onClick": [Function],
               "type": "button",
               "value": "Logout",
@@ -184,6 +193,7 @@ ShallowWrapper {
           "type": "div",
         },
         false,
+        "",
       ],
       "type": "div",
     },

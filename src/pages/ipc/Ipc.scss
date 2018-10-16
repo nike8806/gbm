@@ -1,0 +1,29 @@
+
+.ipc {
+  width: 960px;
+  border-radius: 10px;
+  overflow: hidden;
+
+  table {
+    width: 100%;
+    display: table;
+    margin: 0;
+
+    td {
+      background: #fff;
+    }
+
+    th {
+      color: #ffffff;
+      background: #6c7ae0;
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  table {
+    display: block;
+  }
+}

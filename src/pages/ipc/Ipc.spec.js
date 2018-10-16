@@ -1,11 +1,13 @@
 import React from 'react';
-import Enzyme, { shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 import Ipc from './Ipc';
+
+jest.mock('axios');
 
 let component;
 
 describe('Ipc component', () => {
-  describe('Happy path', () => {
+  describe('On mount', () => {
     beforeEach(() => {
       component = shallow(
         <Ipc />
@@ -15,8 +17,18 @@ describe('Ipc component', () => {
     it('should render correctly', () => {
       expect(component).toMatchSnapshot();
     });
-  });
-  describe('With error on the service', () => {
 
+    describe('On componentDidMount calling GBM service', () => {
+      it('should show a loader before resolve and closed when is mounted', async () => {
+        // TODO implement the UT
+      });
+
+      it('should render the data when is correct', () => {
+        // TODO implement the UT
+      });
+      it('should show an error when is wrong', () => {
+        // TODO implement the UT
+      });
+    });
   });
 });

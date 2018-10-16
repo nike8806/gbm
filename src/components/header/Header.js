@@ -15,7 +15,8 @@ class Header extends Component {
   };
 
   state = {
-    showLoader: false
+    showLoader: false,
+    errorMessage: ''
   }
 
   /**
@@ -27,21 +28,17 @@ class Header extends Component {
     this.setState({ showLoader: true });
     auth()
       .signOut()
-      .then((response) => {
+      .then(() => {
         this.setState({ showLoader: false });
         history.push(ROUTES.LOGIN);
-        console.log(response);
       }).catch((error) => {
-        // Handle Errors here.
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorCode, errorMessage);
-        this.setState({ showLoader: false });
+        const { message: errorMessage } = error;
+        this.setState({ showLoader: false, errorMessage });
       });
   }
 
   render() {
-    const { showLoader } = this.state;
+    const { showLoader, errorMessage } = this.state;
     const { children } = this.props;
 
     return (
@@ -49,6 +46,7 @@ class Header extends Component {
         <div className="header__title">
           <input
             type="button"
+            id="button-logout"
             onClick={this.onSubmitLogout}
             value="Logout"
           />
@@ -57,8 +55,15 @@ class Header extends Component {
         <div className="header__title">
           {children}
         </div>
+
         {showLoader && (
           <Loader />
+        )}
+
+        {errorMessage && (
+          <h2 className="login__error-message">
+            {errorMessage}
+          </h2>
         )}
       </div>
     );

@@ -24,7 +24,8 @@ class Login extends Component {
   /**
   * OnSubmit function to try login with Firebase
   */
-  onSubmitLogin = () => {
+  onSubmitLogin = (event) => {
+    event.preventDefault();
     const { email, password } = this.state;
     const { history } = this.props;
 
@@ -96,7 +97,8 @@ class Login extends Component {
             </label>
 
             <input
-              type="button"
+              type="submit"
+              id="button-submit"
               onClick={this.onSubmitLogin}
               value="Login"
             />
@@ -108,7 +110,7 @@ class Login extends Component {
         )}
 
         {errorMessage && (
-          <h2>
+          <h2 className="login__error-message">
             {errorMessage}
           </h2>
         )}

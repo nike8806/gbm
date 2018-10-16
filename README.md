@@ -13,7 +13,7 @@ Test for GBM
   - [npm run eject](#npm-run-eject)
 
 ## Features
-- Access page with Firebase:
+- Access page with Firebase, credentials:
   - email: jhdezcruz@gmail.com
   - password: 123456
 - IPC page: Classic client
@@ -28,8 +28,7 @@ Test for GBM
 - Firebase, params refactor.
 - Styles and SASS organization.
 - Mobile First.
-- Unit Testing.
-- Code coverage.
+- Finish the UT and improve the code coverage.
 - Dockerize.
 - Improve Linter
 

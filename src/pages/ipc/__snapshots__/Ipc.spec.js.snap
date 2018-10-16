@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Ipc component Happy path should render correctly 1`] = `
+exports[`Ipc component On mount should render correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <withRouter(CheckAuthorization) />,

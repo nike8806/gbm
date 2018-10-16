@@ -3,6 +3,7 @@ import axios from '../../lib/gbm-axios/gbm-axios';
 import Loader from '../../components/loader/Loader';
 import Header from '../../components/header/Header';
 import CheckAuthorization from '../../components/auth/CheckAuthorization';
+import './Ipc.scss';
 
 /**
  * HAndle the IPC page
@@ -18,7 +19,6 @@ class Ipc extends Component {
     // Problem with control access (CORS)
     axios.get(' http://www.mocky.io/v2/5bc20e09320000530021acc8')
       .then((response) => {
-        console.log(response.data.resultObj);
         this.setState({
           IpcHistory: response.data.resultObj,
           showLoader: false
@@ -45,14 +45,17 @@ class Ipc extends Component {
         {showLoader && (
           <Loader />
         )}
+
         {showErrorSection && (
-          <h2>
-            An error has ocurred
-          </h2>
+          <div className="error-section">
+            <h2>
+              An error has ocurred
+            </h2>
+          </div>
         )}
 
         {IpcHistory && (
-          <table className="ipc-data">
+          <table className="ipc-data-section">
             <thead>
               <tr>
                 <th>
